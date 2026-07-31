@@ -1,31 +1,33 @@
 import { useState } from "react";
+import type { Book } from "../types/Book";
 
 type BookFormProps = {
-    onAddBook: (book: {
-        title: string;
-        author: string;
-        status: string;
-    }) => void;
+    onAddBook: (book: Book) => void;
 };
 
 function BookForm({onAddBook}: BookFormProps) {
     const[title, setTitle] = useState("")
     const[author, setAuthor] = useState("")
-    const[status, setStatus] = useState("")
+    const[status, setStatus] = useState<Book["status"] | "">("");
 
-    function handleSubmit(e: React.FormEvent) {
-        e.preventDefault()
+    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+       
+        if (!title.trim() || !author.trim() || !status) {
+            return;
+        }
 
-        const newBook = {
+        const newBook: Book = {
             title,
             author,
-            status
+            status,
         }
-        onAddBook(newBook)
 
-        setTitle("")
-        setAuthor("")
-        setStatus("")
+        onAddBook(newBook);
+
+        setTitle("");
+        setAuthor("");
+        setStatus("");
     }
 
     return( 
@@ -53,15 +55,15 @@ function BookForm({onAddBook}: BookFormProps) {
             <select 
                 value={status}
                 id="status"
-                onChange={(e) => setStatus(e.target.value)}
+                onChange={(e) => setStatus(e.target.value as Book["status"] | "")}
             >
                 <option value="">Selecione</option>
-                <option value="read">Lido</option>
-                <option value="unread">Não lido</option>
+                <option value="Lido">Lido</option>
+                <option value="Não lido">Não lido</option>
                 
             </select>
 
-            <button>Adicionar Livro</button>
+            <button type="submit">Adicionar Livro</button>
 
 
         </form>
