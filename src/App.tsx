@@ -1,10 +1,5 @@
 import BookForm from "./components/BookForm";
-
-type Book ={
-  title: string;
-  author: string;
-  status: string;
-};
+import type { Book } from "./types/Book";
 
 function App() {
 
