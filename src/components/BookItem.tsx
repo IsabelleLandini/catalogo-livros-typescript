@@ -13,16 +13,27 @@ function BookItem({
     onUpdateBook 
 }: BookItemProps) {
     return (
-        <div>
-            <h3>{book.title}</h3>
-            <p>{book.author}</p>
-            <p>{book.status}</p>
-            <button onClick={() => book._id && onDeleteBook(book._id)}>
-               ❌ Remover
-            </button>
-            <button onClick={() => book._id && onUpdateBook(book._id)}>
-                🔄 Alterar status
-            </button>
+        <div className="book-card">
+            <div className="book-info">
+                <h3>{book.title}</h3>
+                <p>{book.author}</p>
+                <span className="book-status">
+                    {book.status}
+                </span>
+            </div>
+
+            <div className="book-actions">
+                <button 
+                    className="edit-button"
+                    onClick={() => book._id && onUpdateBook(book._id)}>
+                    🔄 Alterar status
+                </button>
+                <button 
+                    className="delete-button"
+                    onClick={() => book._id && onDeleteBook(book._id)}>
+                    ❌ Remover
+                </button>
+            </div>
         </div>
     );
 }

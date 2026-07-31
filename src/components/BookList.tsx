@@ -10,7 +10,7 @@ type BookListProps = {
 // Renderiza a lista de livros recebida pelo componente pai
 function BookList ({ books, onDeleteBook, onUpdateBook }: BookListProps) {
     return (
-        <div>
+        <div className="book-list">
             {books.map((book) => (
                 <BookItem
                     key={book._id} 

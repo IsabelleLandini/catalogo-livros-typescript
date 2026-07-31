@@ -1,0 +1,194 @@
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #222;
+    font-weight: 700;
+}
+
+.header p {
+    color: #756767;
+    font-size: 18px;
+}
+
+/* Seções */
+.form-section,
+.books-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 32px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* Títulos das seções */
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 22px;
+    color: #333;
+}
+
+.section-title span {
+    background: #c47a45;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Formulário */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #c47a45;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #c47a45;
+    color: white;
+    font-weight: 600;
+}
+
+/* Lista de livros */
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card do livro */
+.book-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 16px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Informações */
+.book-info h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.book-info p {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+/* Status */
+.book-status {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 20px;
+    background: #f1e2d5;
+    color: #c47a45;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Botões */
+.book-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.book-actions button {
+    padding: 9px 14px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.book-actions button:hover {
+    opacity: 0.85;
+}
+
+.edit-button {
+    background: #c47a45;
+}
+
+.delete-button {
+    background: #b84c4c;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+
+    .container {
+        padding: 24px 16px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .book-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .book-actions {
+        width: 100%;
+    }
+
+    .book-actions button {
+        flex: 1;
+    }
+}
