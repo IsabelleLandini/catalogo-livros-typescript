@@ -4,9 +4,10 @@ import BookItem from "./BookItem";
 type BookListProps = {
     books: Book[];
     onDeleteBook: (id: string) => void;
+    onUpdateBook: (id:string) => void;
 };
 
-function BookList ({ books, onDeleteBook }: BookListProps) {
+function BookList ({ books, onDeleteBook, onUpdateBook }: BookListProps) {
     return (
         <div>
             {books.map((book) => (
@@ -14,6 +15,7 @@ function BookList ({ books, onDeleteBook }: BookListProps) {
                     key={book._id} 
                     book={book} 
                     onDeleteBook={onDeleteBook}
+                    onUpdateBook={onUpdateBook}
                 />
             ))}
         </div>

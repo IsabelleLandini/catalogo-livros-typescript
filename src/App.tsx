@@ -3,7 +3,7 @@ import BookList from "./components/BookList";
 import { useBooks } from "./hooks/useBooks";
 
 function App() {
-  const {books, addBook, deleteBook} = useBooks();
+  const {books, addBook, deleteBook, updateBook} = useBooks();
 
  
   return (
@@ -21,6 +21,7 @@ function App() {
         <BookList 
           books={books} 
           onDeleteBook={deleteBook}
+          onUpdateBook={updateBook}
         />
       </section>
     </main>
