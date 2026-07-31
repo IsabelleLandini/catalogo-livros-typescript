@@ -11,8 +11,8 @@ function BookItem({ book, onDeleteBook }: BookItemProps) {
             <h3>{book.title}</h3>
             <p>{book.author}</p>
             <p>{book.status}</p>
-            <button onClick={() => onDeleteBook(book._id!)}>
-                 ❌ Remover
+            <button onClick={() => onDeleteBook(book._id)}>
+                Remover
             </button>
         </div>
     );
