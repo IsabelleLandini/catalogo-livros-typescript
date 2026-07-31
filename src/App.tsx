@@ -1,11 +1,10 @@
 import { useState } from "react";
 import BookForm from "./components/BookForm";
 import type { Book } from "./types/Book";
+import BookList from "./components/BookList";
 
 function App() {
   const [books, setBooks] = useState<Book[]>([]);
-
-  console.log(books);
 
   function addBook(book: Book) {
     setBooks((prevBooks) => [...prevBooks, book]);
@@ -23,13 +22,7 @@ function App() {
 
       <section>
         <h2>Lista de Livros</h2>
-        {books.map((book) => (
-          <div key={book.title}>
-            <h3>{book.title}</h3>
-            <p>{book.author}</p>
-            <p>{book.status}</p>
-          </div>
-        ))}
+        <BookList books={books} />
       </section>
     </main>
   );
