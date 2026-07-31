@@ -1,8 +1,8 @@
 # 📚 Catálogo de Livros - React + TypeScript
 
-Aplicação frontend desenvolvida com **React e TypeScript** para gerenciamento de um catálogo de livros.
+Aplicação frontend desenvolvida com **React e TypeScript** para gerenciamento de um catálogo de livros, integrada à **API do CrudCrud** para persistência dos dados.
 
-O projeto permite cadastrar, visualizar, atualizar o status e remover livros, aplicando conceitos fundamentais do desenvolvimento frontend moderno, como componentização, tipagem com TypeScript, gerenciamento de estado e organização de componentes.
+O projeto permite cadastrar, visualizar, atualizar o status e remover livros, aplicando conceitos fundamentais do desenvolvimento frontend moderno, como componentização, tipagem com TypeScript, gerenciamento de estado, integração com APIs e organização de componentes.
 
 ---
 
@@ -24,6 +24,19 @@ O projeto permite cadastrar, visualizar, atualizar o status e remover livros, ap
 - ✅ Organização dos dados utilizando TypeScript
 - ✅ Componentização da aplicação
 - ✅ Interface responsiva e estilizada
+
+---
+
+## 🌐 Integração com API
+
+A aplicação utiliza a **API do CrudCrud** para armazenar e gerenciar os livros cadastrados.
+
+Operações implementadas:
+
+- **GET** — listar livros
+- **POST** — adicionar livro
+- **PUT** — atualizar o status de um livro
+- **DELETE** — remover um livro
 
 ---
 
