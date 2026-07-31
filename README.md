@@ -17,13 +17,13 @@ O projeto permite cadastrar, visualizar, atualizar o status e remover livros, ap
 
 ## 📌 Funcionalidades
 
-✅ Cadastro de novos livros
-✅ Listagem dos livros cadastrados
-✅ Atualização do status dos livros
-✅ Exclusão de livros
-✅ Organização dos dados utilizando TypeScript
-✅ Componentização da aplicação
-✅ Interface responsiva e estilizada
+- ✅ Cadastro de novos livros
+- ✅ Listagem dos livros cadastrados
+- ✅ Atualização do status dos livros
+- ✅ Exclusão de livros
+- ✅ Organização dos dados utilizando TypeScript
+- ✅ Componentização da aplicação
+- ✅ Interface responsiva e estilizada
 
 ---
 
