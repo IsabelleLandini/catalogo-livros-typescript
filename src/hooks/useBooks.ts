@@ -8,8 +8,10 @@ import {
 } from "../services/api";
 
 export function useBooks() {
+    // Mantém a lista de livros sincronizada com a interface
     const[books, setBooks] = useState<Book[]>([]);
 
+    // Carrega os livros da API assim que o componente é montado
     useEffect(() => {
         async function loadBooks() {
             try {
@@ -23,6 +25,7 @@ export function useBooks() {
         loadBooks();
     }, []);
 
+    // Realiza a criação do livro e atualiza o estado local
     async function addBook(book: CreateBook) {
         try {
             const newBook = await createBook(book);
@@ -33,6 +36,7 @@ export function useBooks() {
         }
     }
 
+    // Remove o livro na API e atualiza a lista local
     async function deleteBook(id:string) {
         try {
             await deleteBookApi(id);
@@ -44,7 +48,8 @@ export function useBooks() {
             console.log(error);
         }
     }
-
+    
+    // Alterna o status do livro entre Lido e Não lido
     async function updateBook(id: string) {
         try {
             const book = books.find(

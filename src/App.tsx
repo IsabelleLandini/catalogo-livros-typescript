@@ -3,7 +3,13 @@ import BookList from "./components/BookList";
 import { useBooks } from "./hooks/useBooks";
 
 function App() {
-  const {books, addBook, deleteBook, updateBook} = useBooks();
+  // Hook responsável pelo gerenciamento das operações dos livros
+  const {
+    books, 
+    addBook, 
+    deleteBook, 
+    updateBook
+  } = useBooks();
 
  
   return (

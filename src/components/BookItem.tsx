@@ -6,6 +6,7 @@ type BookItemProps = {
     onUpdateBook: (id: string) => void;
 };
 
+// Componente responsável por exibir um único livro
 function BookItem({ 
     book, 
     onDeleteBook,

@@ -10,6 +10,7 @@ function BookForm({onAddBook}: BookFormProps) {
     const[author, setAuthor] = useState("")
     const[status, setStatus] = useState<Book["status"] | "">("");
 
+    // Envia os dados preenchidos pelo usuário para criação do livro
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
        
